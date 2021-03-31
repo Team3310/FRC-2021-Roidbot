@@ -68,6 +68,8 @@ public class DriveSubsystem extends SubsystemBase {
   private double rotCommandLB;
   private double rotCommandRB;
 
+  private IntakeSubsystem m_intake;
+
   // The gyro sensor
   private PigeonIMU m_gyro = new PigeonIMU(DriveConstants.kGyroPort);
   private double[] xyz_dps = new double[3];
@@ -78,6 +80,7 @@ public class DriveSubsystem extends SubsystemBase {
 
   /** Creates a new DriveSubsystem. */
   public DriveSubsystem() {
+    m_intake = IntakeSubsystem.INSTANCE;
     m_gyro.configFactoryDefault();
   }
 
@@ -128,6 +131,24 @@ public class DriveSubsystem extends SubsystemBase {
     SmartDashboard.putNumber("Back Left get Absolute can encoder pose", m_rearLeft.getAbsoluteCanPosition());
     SmartDashboard.putNumber("Back Left get can encoder pose", m_rearLeft.getCanPosition());
     SmartDashboard.putNumber("Back Left get offset", m_rearLeft.getOffsetDeg());
+  }
+
+  public double getAccelValueX(){
+    double[] accelAngles = new double[3];
+    m_gyro.getAccelerometerAngles(accelAngles);
+    return accelAngles[0];
+  }
+
+  public double getAccelValueY(){
+    double[] accelAngles = new double[3];
+    m_gyro.getAccelerometerAngles(accelAngles);
+    return accelAngles[1];
+  }
+
+  public double getAccelValueZ(){
+    double[] accelAngles = new double[3];
+    m_gyro.getAccelerometerAngles(accelAngles);
+    return accelAngles[2];
   }
 
   public void setTurnAngle(double angleDegrees) {
@@ -188,6 +209,7 @@ public class DriveSubsystem extends SubsystemBase {
               : new ChassisSpeeds(xSpeed, ySpeed, rot));
       SwerveDriveKinematics.normalizeWheelSpeeds(swerveModuleStates, DriveConstants.kMaxSpeedMetersPerSecond);
       speedCommandLF = swerveModuleStates[0].speedMetersPerSecond;
+      speedCommandLF = swerveModuleStates[0].speedMetersPerSecond;
       rotCommandLF = swerveModuleStates[0].angle.getDegrees();
       speedCommandLB = swerveModuleStates[2].speedMetersPerSecond;
       rotCommandLB = swerveModuleStates[2].angle.getDegrees();
@@ -195,6 +217,7 @@ public class DriveSubsystem extends SubsystemBase {
       rotCommandRF = swerveModuleStates[1].angle.getDegrees();
       speedCommandRB = swerveModuleStates[3].speedMetersPerSecond;
       rotCommandRB = swerveModuleStates[3].angle.getDegrees();
+
 
       m_frontLeft.setDesiredState(swerveModuleStates[0]);
       m_frontRight.setDesiredState(swerveModuleStates[1]);
@@ -233,6 +256,7 @@ public class DriveSubsystem extends SubsystemBase {
     m_frontRight.resetEncoders();
     m_rearLeft.resetEncoders();
     m_rearRight.resetEncoders();
+    m_intake.resetIntakeEncoder();
   }
 
 

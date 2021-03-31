@@ -19,36 +19,39 @@ import edu.wpi.first.wpilibj.trajectory.TrapezoidProfile;
 public final class Constants {
   public static final class DriveConstants {
 
-    public static final double absoluteTurnZeroDegRightFront = 254.1;
-    public static final double absoluteTurnZeroDegLeftFront = 256.3;
-    public static final double absoluteTurnZeroDegRightRear = 136.5 ;
-    public static final double absoluteTurnZeroDegLeftRear = 69.5;
+    public static final double absoluteTurnZeroDegRightFront = 113.379;
+    public static final double absoluteTurnZeroDegLeftFront = 343.037;
+    public static final double absoluteTurnZeroDegRightRear = 356.572;
+    public static final double absoluteTurnZeroDegLeftRear = 214.102;
 
-    public static final int kFrontLeftDriveMotorMasterPort = 14;
-    public static final int kFrontLeftDriveMotorSlavePort = 14;
+    public static final int kFrontLeftDriveMotorMasterPort = 13;
+    public static final int kFrontLeftDriveMotorSlavePort = 12;
     public static final int kRearLeftDriveMotorMasterPort = 15;
-    public static final int kRearLeftDriveMotorSlavePort = 15;
-    public static final int kFrontRightDriveMotorMasterPort = 1;
-    public static final int kFrontRightDriveMotorSlavePort = 1;
+    public static final int kRearLeftDriveMotorSlavePort = 14;
+    public static final int kFrontRightDriveMotorMasterPort = 2;
+    public static final int kFrontRightDriveMotorSlavePort = 3;
     public static final int kRearRightDriveMotorMasterPort = 0;
-    public static final int kRearRightDriveMotorSlavePort = 0;
+    public static final int kRearRightDriveMotorSlavePort = 1;
 
     public static final int kFrontLeftTurningMotorPort = 10;
     public static final int kRearLeftTurningMotorPort = 11;
     public static final int kFrontRightTurningMotorPort = 5;
     public static final int kRearRightTurningMotorPort = 4;
 
-    public static final int kFrontLeftCanCoderPort = 2;
-    public static final int kRearLeftCanCoderPort = 3;
-    public static final int kFrontRightCanCoderPort = 1;
-    public static final int kRearRightCanCoderPort = 0;
+    public static final int kIntakeMotor = 6;
 
-    public static final int kGyroPort = 16;
+    public static final int kFrontLeftCanCoderPort = 0;
+    public static final int kRearLeftCanCoderPort = 2;
+    public static final int kFrontRightCanCoderPort = 1;
+    public static final int kRearRightCanCoderPort = 3;
+
+    public static final int kGyroPort = 0;
 
     public static final double TURN_OUTPUT_TO_ENCODER_RATIO = 1;//12.8;
-    public static final double DRIVE_OUTPUT_TO_ENCODER_RATIO = 8.16;
+    public static final double DRIVE_OUTPUT_TO_ENCODER_RATIO = 5.71;
     public static final double DRIVE_ENCODER_TICKS_PER_MOTOR_REVOLUTION = 2048.0;
     public static final double TURN_ENCODER_TICKS_PER_MOTOR_REVOLUTION = 4096.0;
+    public static final double ENCODER_TICKS_PER_MOTOR_REVOLUTION = 2048;
     public static final double kWheelDiameterInches = 3.89;
 
     // Distance between centers of right and left wheels on robot
@@ -73,7 +76,7 @@ public final class Constants {
     public static final double kvVoltSecondsPerMeter = 0.8;
     public static final double kaVoltSecondsSquaredPerMeter = 0.15;
 
-    public static final double kMaxSpeedMetersPerSecond = 4;
+    public static final double kMaxSpeedMetersPerSecond = 5.75;
   }
 
   public static final class OIConstants {
