@@ -68,8 +68,8 @@ public class RobotContainer {
         autonTaskChooser.addOption("Slalom Path", new SlalomSkills(m_robotDrive));
         autonTaskChooser.addOption("Red Path A", new RedPathA(m_robotDrive));
         autonTaskChooser.addOption("Red Path B", new RedPathB(m_robotDrive));
-        autonTaskChooser.addOption("Blue Path A", new BluePathA(m_robotDrive));
-        autonTaskChooser.addOption("Blue Path B", new BluePathB(m_robotDrive));
+        autonTaskChooser.addOption("Blue Path A", new BluePathA(m_robotDrive, m_Intake));
+        autonTaskChooser.addOption("Blue Path B", new BluePathB(m_robotDrive, m_Intake));
         autonTaskChooser.addOption("Barrel Racing", new BarrelRacing(m_robotDrive));
         autonTaskChooser.addOption("100 Inches Up", new OneHundredInchesUp(m_robotDrive));
         SmartDashboard.putData("auton", autonTaskChooser);

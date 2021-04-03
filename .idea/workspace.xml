@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="975e1bfd-a245-446a-94b1-d9562a7e9a87" name="Default Changelist" comment="Second Push">
-      <change beforePath="$PROJECT_DIR$/.idea/2021-Roidbot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/2021-Roidbot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RoidBot/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RoidBot/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RoidBot/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RoidBot/Paths/Slalom" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/Constants.java" afterDir="false" />
-    </list>
+    <list default="true" id="975e1bfd-a245-446a-94b1-d9562a7e9a87" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,11 +72,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SwerveControllerCommand" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\FRC2021Swerve\RoidBot\2021-Roidbot\RoidBot\src\main\deploy\output" />
       <recent name="C:\Users\Alex\Documents\Robotics\SwerveControllerCommand\src\main\deploy" />
       <recent name="C:\Users\Alex\Documents\Robotics\SwerveControllerCommand\pathweaver\PathWeaver\output" />
       <recent name="C:\Users\Alex\Documents\Robotics\SwerveControllerCommand\src\main\deploy\paths" />
@@ -198,8 +187,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Second Push" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second Push" />
   </component>
   <component name="WpiLibVersionService">
     <option name="lastChecked" value="20210205171355" />
