@@ -5,39 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="975e1bfd-a245-446a-94b1-d9562a7e9a87" name="Default Changelist" comment="Second Push">
-      <change afterPath="$PROJECT_DIR$/Paths/Slalom" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pathweaver/Paths/100inchesUp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pathweaver/Paths/BarrelRacing.path" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pathweaver/output/output/Slalom.wpilib.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pathweaver/pathweaver/output/output/100inchesUp.wpilib.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pathweaver/pathweaver/output/output/Slalom1.wpilib.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pathweaver/pathweaver/output/output/finalFall.wpilib.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pathweaver/pathweaver/output/output/firstClimb.wpilib.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pathweaver/pathweaver/output/output/firstFall.wpilib.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pathweaver/pathweaver/output/output/secondClimb.wpilib.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pathweaver/pathweaver/output/output/secondFallAndLastClimb.wpilib.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/deploy/output/100inchesUp.wpilib.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/robot/auto/BarrelRacing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/robot/auto/OneHundredInchesUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RoidBot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RoidBot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/2021-Roidbot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/2021-Roidbot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pathweaver.json" beforeDir="false" afterPath="$PROJECT_DIR$/pathweaver.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pathweaver/Paths/Slalom1.path" beforeDir="false" afterPath="$PROJECT_DIR$/pathweaver/Paths/Slalom1.path" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pathweaver/pathweaver.json" beforeDir="false" afterPath="$PROJECT_DIR$/pathweaver/pathweaver.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/deploy/output/Slalom1.wpilib.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/deploy/output/Slalom1.wpilib.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/deploy/output/finalFall.wpilib.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/deploy/output/finalFall.wpilib.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/deploy/output/firstClimb.wpilib.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/deploy/output/firstClimb.wpilib.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/deploy/output/firstFall.wpilib.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/deploy/output/firstFall.wpilib.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/deploy/output/secondClimb.wpilib.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/deploy/output/secondClimb.wpilib.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/deploy/output/secondFallAndLastClimb.wpilib.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/deploy/output/secondFallAndLastClimb.wpilib.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RoidBot/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RoidBot/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RoidBot/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RoidBot/Paths/Slalom" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/RobotContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/RobotContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/auto/InitializeTrajectory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/auto/InitializeTrajectory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/auto/SlalomSkills.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/auto/SlalomSkills.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/auto/StopTrajectory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/auto/StopTrajectory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +58,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -121,7 +97,7 @@
       <command value="gradle deploy" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.SwerveControllerCommand [deploy]">
+  <component name="RunManager" selected="Gradle.SwerveControllerCommand [build]">
     <configuration name="Pathweaver" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -192,8 +168,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SwerveControllerCommand [deploy]" />
         <item itemvalue="Gradle.SwerveControllerCommand [build]" />
+        <item itemvalue="Gradle.SwerveControllerCommand [deploy]" />
       </list>
     </recent_temporary>
   </component>
