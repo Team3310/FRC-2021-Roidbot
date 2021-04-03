@@ -6,11 +6,11 @@ import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
 import frc.robot.RobotContainer;
 import frc.robot.subsystems.DriveSubsystem;
 
-public class SlalomSkills extends SequentialCommandGroup {
+public class OneHundredInchesUp extends SequentialCommandGroup {
 
-    public SlalomSkills(DriveSubsystem driveSubsystem) {
- 
-        Trajectory trajectory = RobotContainer.loadPathTrajectory("output/Slalom1.wpilib.json");
+    public OneHundredInchesUp(DriveSubsystem driveSubsystem) {
+
+        Trajectory trajectory = RobotContainer.loadPathTrajectory("output/100inchesUp.wpilib.json");
 
         addCommands(
                 new InstantCommand(() -> driveSubsystem.resetEncoders()),

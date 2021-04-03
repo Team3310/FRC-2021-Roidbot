@@ -2,6 +2,7 @@ package frc.robot.auto;
 
 import edu.wpi.first.wpilibj.trajectory.Trajectory;
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import edu.wpi.first.wpilibj2.command.InstantCommand;
 import frc.robot.subsystems.DriveSubsystem;
 
 public class InitializeTrajectory extends CommandBase {
@@ -16,7 +17,10 @@ public class InitializeTrajectory extends CommandBase {
     @Override
     public void initialize() {
         System.out.println("Initialize Trajectory");
+        robotDrive.resetEncoders();
+        robotDrive.resetHeading();
         robotDrive.resetOdometry(trajectory.getInitialPose());
+
     }
 
     @Override
