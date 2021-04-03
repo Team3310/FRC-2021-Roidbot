@@ -61,6 +61,7 @@ public class SwerveModuleFalcon {
     configsTurn.primaryPID.selectedFeedbackSensor = TalonFXFeedbackDevice.RemoteSensor1.toFeedbackDevice();
 
     configsDrive.primaryPID.selectedFeedbackSensor = FeedbackDevice.IntegratedSensor;
+    configsDrive.closedloopRamp = .4;
 
     m_driveMotorMaster.configAllSettings(configsDrive);
     m_driverMotorSlave.configAllSettings(configsDrive);
@@ -122,10 +123,10 @@ public class SwerveModuleFalcon {
     m_turnMotor.configMotionAcceleration(28000);
     m_turnMotor.configMotionSCurveStrength(4);
 
-    m_turnMotor.config_kF(kTurnMotionMagicSlot, 0.1);
-    m_turnMotor.config_kP(kTurnMotionMagicSlot, 3.0);
-    m_turnMotor.config_kI(kTurnMotionMagicSlot, 0.003);
-    m_turnMotor.config_kD(kTurnMotionMagicSlot, 2.0);
+    m_turnMotor.config_kF(kTurnMotionMagicSlot, 0.2);
+    m_turnMotor.config_kP(kTurnMotionMagicSlot, 1.0);
+    m_turnMotor.config_kI(kTurnMotionMagicSlot, 0.002);
+    m_turnMotor.config_kD(kTurnMotionMagicSlot, 0.0);
     m_turnMotor.config_IntegralZone(kTurnMotionMagicSlot, (int)(5.0 * turnDegreesToTicks(5)));
 
     m_turnMotor.selectProfileSlot(kTurnMotionMagicSlot, 0);

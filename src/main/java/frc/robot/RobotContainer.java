@@ -21,14 +21,18 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.SwerveControllerCommand;
+import edu.wpi.first.wpilibj2.command.button.Button;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.Constants.AutoConstants;
 import frc.robot.Constants.DriveConstants;
 import frc.robot.Constants.OIConstants;
 import frc.robot.auto.*;
+import frc.robot.commands.IntakeSetRPM;
+import frc.robot.commands.IntakeSetSpeed;
 import frc.robot.controller.GameController;
 import frc.robot.controller.Xbox;
 import frc.robot.subsystems.DriveSubsystem;
+import frc.robot.subsystems.IntakeSubsystem;
 
 /*
  * This class is where the bulk of the robot should be declared.  Since Command-based is a
@@ -39,6 +43,7 @@ import frc.robot.subsystems.DriveSubsystem;
 public class RobotContainer {
     // The robot's subsystems
     public final DriveSubsystem m_robotDrive = new DriveSubsystem();
+    public final IntakeSubsystem m_Intake = new IntakeSubsystem();
 
     // The driver's controller
     private final GameController m_driverController = new GameController(OIConstants.kDriverControllerPort, new Xbox());
@@ -88,6 +93,10 @@ public class RobotContainer {
      * calling passing it to a {@link JoystickButton}.
      */
     private void configureButtonBindings() {
+        Button intakeBall = m_driverController.getRightTrigger();
+        intakeBall.whenPressed(new IntakeSetSpeed(m_Intake, 100));
+        intakeBall.whenReleased(new IntakeSetSpeed(m_Intake, 0));
+
         SmartDashboard.putData("Set Turn 0", new InstantCommand(() -> m_robotDrive.setTurnAngle(0)));
         SmartDashboard.putData("Set Turn 90", new InstantCommand(() -> m_robotDrive.setTurnAngle(90)));
         SmartDashboard.putData("Set Turn 180", new InstantCommand(() -> m_robotDrive.setTurnAngle(180)));
