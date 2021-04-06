@@ -6,6 +6,7 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.sensors.PigeonIMU;
 
+import edu.wpi.first.wpilibj.Preferences;
 import edu.wpi.first.wpilibj.geometry.Pose2d;
 import edu.wpi.first.wpilibj.geometry.Rotation2d;
 import edu.wpi.first.wpilibj.kinematics.ChassisSpeeds;
@@ -67,7 +68,7 @@ public class DriveSubsystem extends SubsystemBase {
   private double rotCommandRF;
   private double rotCommandLB;
   private double rotCommandRB;
-
+  private Preferences prefs;
   private IntakeSubsystem m_intake;
 
   // The gyro sensor
@@ -86,6 +87,7 @@ public class DriveSubsystem extends SubsystemBase {
 
   @Override
   public void periodic() {
+    prefs = Preferences.getInstance();
       // Update the odometry in the periodic block
     m_odometry.update(
         Rotation2d.fromDegrees(getHeading()),
@@ -131,6 +133,8 @@ public class DriveSubsystem extends SubsystemBase {
     SmartDashboard.putNumber("Back Left get Absolute can encoder pose", m_rearLeft.getAbsoluteCanPosition());
     SmartDashboard.putNumber("Back Left get can encoder pose", m_rearLeft.getCanPosition());
     SmartDashboard.putNumber("Back Left get offset", m_rearLeft.getOffsetDeg());
+    SmartDashboard.putNumber("Accel Z", getBiasedAccelValueZ());
+    SmartDashboard.putString("Path", prefs.getString("Path", "E"));
   }
 
   public double getAccelValueX(){
@@ -148,6 +152,13 @@ public class DriveSubsystem extends SubsystemBase {
   public double getAccelValueZ(){
     double[] accelAngles = new double[3];
     m_gyro.getAccelerometerAngles(accelAngles);
+    return accelAngles[2];
+  }
+
+
+  public double getBiasedAccelValueZ(){
+    short[] accelAngles = new short[3];
+    m_gyro.getBiasedAccelerometer(accelAngles);
     return accelAngles[2];
   }
 

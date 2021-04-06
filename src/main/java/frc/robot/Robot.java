@@ -6,9 +6,13 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.Preferences;
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
+import frc.robot.auto.BluePathA;
+import frc.robot.auto.BluePathB;
 import frc.robot.subsystems.DriveSubsystem;
+import frc.robot.subsystems.IntakeSubsystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -18,8 +22,10 @@ import frc.robot.subsystems.DriveSubsystem;
  */
 public class Robot extends TimedRobot {
   private Command m_autonomousCommand;
+  private Command m_galacticSearch;
   private RobotContainer m_robotContainer;
   private DriveSubsystem m_drive;
+  private IntakeSubsystem m_intake;
   private Preferences prefs;
 
   /**
@@ -32,8 +38,9 @@ public class Robot extends TimedRobot {
     // autonomous chooser on the dashboard.
     m_robotContainer = new RobotContainer();
     m_robotContainer.robotInit();
-    m_drive= new DriveSubsystem();
-    prefs = Preferences.getInstance();
+    m_drive = new DriveSubsystem();
+    m_intake = new IntakeSubsystem();
+
   }
 
   /**
@@ -54,20 +61,24 @@ public class Robot extends TimedRobot {
 
   /** This function is called once each time the robot enters Disabled mode. */
   @Override
-  public void disabledInit() {}
+  public void disabledInit() {
+    m_galacticSearch = new BluePathA(m_drive, m_intake);
+  }
 
   @Override
   public void disabledPeriodic(){
-    if(m_drive.getAccelValueY() < 10) {
-      prefs.putInt("Path", 0);
-      prefs.putInt("Color", 0);
+    if(m_drive.getBiasedAccelValueZ() > 20000) {
+      System.out.println("Registered");
+      m_galacticSearch = new BluePathB(m_drive, m_intake);
     }
+    //System.out.println(m_galacticSearch);
   }
 
   /** This autonomous runs the autonomous command selected by your {@link RobotContainer} class. */
   @Override
   public void autonomousInit() {
     m_autonomousCommand = m_robotContainer.getAutonomousCommand();
+
 
     /*
      * String autoSelected = SmartDashboard.getString("Auto Selector",
@@ -79,6 +90,7 @@ public class Robot extends TimedRobot {
     // schedule the autonomous command (example)
     if (m_autonomousCommand != null) {
       m_autonomousCommand.schedule();
+      //m_galacticSearch.schedule();
     }
   }
 
