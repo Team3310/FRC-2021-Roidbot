@@ -61,7 +61,7 @@ public class SwerveModuleFalcon {
     configsTurn.primaryPID.selectedFeedbackSensor = TalonFXFeedbackDevice.RemoteSensor1.toFeedbackDevice();
 
     configsDrive.primaryPID.selectedFeedbackSensor = FeedbackDevice.IntegratedSensor;
-    configsDrive.closedloopRamp = .4;
+    configsDrive.closedloopRamp = .1;
 
     m_driveMotorMaster.configAllSettings(configsDrive);
     m_driverMotorSlave.configAllSettings(configsDrive);

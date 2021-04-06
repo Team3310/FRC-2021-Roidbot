@@ -86,10 +86,7 @@ public class RobotContainer {
         autonTaskChooser.addOption("Blue Path B", new BluePathB(m_robotDrive, m_Intake));
         autonTaskChooser.addOption("Barrel Racing", new BarrelRacing(m_robotDrive));
         autonTaskChooser.addOption("100 Inches Up", new OneHundredInchesUp(m_robotDrive));
-<<<<<<< Updated upstream
         autonTaskChooser.addOption("Galactic Search", new GalacticSearch(m_robotDrive, m_Intake));
-=======
->>>>>>> Stashed changes
         autonTaskChooser.addOption("Bounce Path", new BouncePath(m_robotDrive));
         SmartDashboard.putData("auton", autonTaskChooser);
     }
