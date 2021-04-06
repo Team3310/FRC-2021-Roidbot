@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="975e1bfd-a245-446a-94b1-d9562a7e9a87" name="Default Changelist" comment="Second Push">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/RoidBot/pathweaver/pathweaver.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/deploy/output/bouncePath.wpilib.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -20,6 +21,13 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/auto/BouncePath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/auto/BouncePath.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/auto/GalacticSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/auto/GalacticSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/subsystems/DriveSubsystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/subsystems/DriveSubsystem.java" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/main/deploy/output/bouncePath.wpilib.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/Robot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/RobotContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/RobotContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/auto/BouncePath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/auto/BouncePath.java" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,6 +219,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WpiLibVersionService">
+<<<<<<< Updated upstream
     <option name="lastChecked" value="20210406171011" />
+=======
+    <option name="lastChecked" value="20210403114248" />
+>>>>>>> Stashed changes
   </component>
 </project>

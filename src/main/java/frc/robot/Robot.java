@@ -67,9 +67,14 @@ public class Robot extends TimedRobot {
 
   @Override
   public void disabledPeriodic(){
+<<<<<<< Updated upstream
     if(m_drive.getBiasedAccelValueZ() > 20000) {
       System.out.println("Registered");
       m_galacticSearch = new BluePathB(m_drive, m_intake);
+=======
+    if(m_drive.getAccelValueY() > 10) {
+      prefs.putInt("Path", 0);
+>>>>>>> Stashed changes
     }
     //System.out.println(m_galacticSearch);
   }
