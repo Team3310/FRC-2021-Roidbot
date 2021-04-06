@@ -45,6 +45,20 @@ public class RobotContainer {
     public final DriveSubsystem m_robotDrive = new DriveSubsystem();
     public final IntakeSubsystem m_Intake = new IntakeSubsystem();
 
+    private static final double STEER_NON_LINEARITY = 0.0;
+    private static final double MOVE_NON_LINEARITY = 1.0;
+
+    private static final int MOVE_NON_LINEAR = -3;
+    private static final int STEER_NON_LINEAR = 0;
+
+    private static final double MOVE_SCALE = 1.0;
+    private static final double STEER_SCALE = 1.0;
+
+    private static final double MOVE_TRIM = 0.0;
+    private static final double STEER_TRIM = 0.0;
+
+    private static final double STICK_DEADBAND = 0.02;
+
     // The driver's controller
     private final GameController m_driverController = new GameController(OIConstants.kDriverControllerPort, new Xbox());
     private SendableChooser<Command> autonTaskChooser;
@@ -79,10 +93,10 @@ public class RobotContainer {
         // A split-stick arcade command, with forward/backward controlled by the left
         // hand, and turning controlled by the right.
         RunCommand driveCommand = new RunCommand(
-                () -> m_robotDrive.drive(-m_driverController.getLeftYAxis() * DriveConstants.kMaxSpeedMetersPerSecond,
-                        -m_driverController.getLeftXAxis() * DriveConstants.kMaxSpeedMetersPerSecond,
-                        -m_driverController.getRightXAxis() * 10.0, true));
-        driveCommand.addRequirements(m_robotDrive);
+                () -> m_robotDrive.drive(squareStick(-m_driverController.getLeftYAxis()) * DriveConstants.kMaxSpeedMetersPerSecond,
+                squareStick(-m_driverController.getLeftXAxis()) * DriveConstants.kMaxSpeedMetersPerSecond,
+                squareStick(-m_driverController.getRightXAxis()) * 10.0, true));
+       driveCommand.addRequirements(m_robotDrive);
         // Configure default commands
         // Set the default drive command to split-stick arcade drive
         m_robotDrive.setDefaultCommand(driveCommand);
@@ -150,5 +164,58 @@ public class RobotContainer {
                 driveSubsystem::setModuleStates, 
                 driveSubsystem);
     }
+
+    public double squareStick(double value) {
+        double output = value * value;
+        return Math.signum(value) * output;
+    }
+
+    public double adjustForSensitivity(double scale, double trim, double steer, int nonLinearFactor,
+                                       double wheelNonLinearity) {
+        if (inDeadZone(steer))
+            return 0;
+
+        steer += trim;
+        steer *= scale;
+        steer = limitValue(steer);
+
+        int iterations = Math.abs(nonLinearFactor);
+        for (int i = 0; i < iterations; i++) {
+            if (nonLinearFactor > 0) {
+                steer = nonlinearStickCalcPositive(steer, wheelNonLinearity);
+            } else {
+                steer = nonlinearStickCalcNegative(steer, wheelNonLinearity);
+            }
+        }
+        return steer;
+    }
+
+    private boolean inDeadZone(double input) {
+        boolean inDeadZone;
+        if (Math.abs(input) < STICK_DEADBAND) {
+            inDeadZone = true;
+        } else {
+            inDeadZone = false;
+        }
+        return inDeadZone;
+    }
+
+    private double limitValue(double value) {
+        if (value > 1.0) {
+            value = 1.0;
+        } else if (value < -1.0) {
+            value = -1.0;
+        }
+        return value;
+    }
+
+    private double nonlinearStickCalcPositive(double steer, double steerNonLinearity) {
+        return Math.sin(Math.PI / 2.0 * steerNonLinearity * steer) / Math.sin(Math.PI / 2.0 * steerNonLinearity);
+    }
+
+    private double nonlinearStickCalcNegative(double steer, double steerNonLinearity) {
+        return Math.asin(steerNonLinearity * steer) / Math.asin(steerNonLinearity);
+    }
+
 
 }
